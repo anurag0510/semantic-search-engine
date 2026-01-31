@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 
-use crate::types::{DocumentPayload, DenseVector};
+use crate::types::{DenseVector, DocumentPayload};
 
 // ==========================================
 // Event Definitions
