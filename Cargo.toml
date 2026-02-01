@@ -2,5 +2,6 @@
 resolver = "2"
 members = [
     "ingestion-api",
-    "shared-types",
+    "shared-types", 
+    "vector-worker",
 ]
