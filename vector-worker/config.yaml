@@ -1,0 +1,6 @@
+kafka_broker: "localhost:9092"
+input_topic: "resume_received"
+output_topic: "resume_vectorized"
+consumer_group: "vectorizer_group_v1"
+kafka_timeout_ms: "5000"
+kafka_send_timeout_secs: 5
