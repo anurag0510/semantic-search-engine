@@ -1,0 +1,28 @@
+[package]
+name = "vector-worker"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shared-types = { path = "../shared-types" }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+yaml_serde = "0.10"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+uuid = { version = "1.0", features = ["v4"] }
+
+# Kafka Client
+rdkafka = { version = "0.39", features = ["tokio", "cmake-build"] }
+
+# ML / BERT embeddings
+rust-bert = { version = "0.23", features = ["remote"] }
+
+# Dependency overrides to fix rust-bert's transitive dependencies
+[dependencies.console]
+version = "0.16"
+default-features = true
+
+[dependencies.indicatif]
+version = "0.18"
