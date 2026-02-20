@@ -1,0 +1,5 @@
+kafka_broker: "localhost:9092"
+input_topic: "resume_vectorized"
+consumer_group: "indexer_group_v1"
+qdrant_grpc_url: "http://localhost:6334"
+collection_name: "resumes"
