@@ -4,4 +4,5 @@ members = ["indexing-worker",
     "ingestion-api",
     "shared-types", 
     "vector-worker",
+    "matching-service",
 ]
