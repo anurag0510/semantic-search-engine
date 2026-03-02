@@ -1375,6 +1375,22 @@ dependencies = [
 [[package]]
 name = "matching-service"
 version = "0.1.0"
+dependencies = [
+ "axum 0.8.8",
+ "console",
+ "indicatif 0.18.3",
+ "qdrant-client",
+ "rust-bert",
+ "serde",
+ "serde_json",
+ "shared-types",
+ "tokio",
+ "tower-http",
+ "tracing",
+ "tracing-subscriber",
+ "uuid",
+ "yaml_serde",
+]
 
 [[package]]
 name = "matchit"
