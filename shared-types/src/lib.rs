@@ -7,5 +7,5 @@ mod events;
 mod types;
 
 // Re-export public types
-pub use events::{DocumentReceivedEvent, DocumentVectorizedEvent};
+pub use events::{DocumentReceivedEvent, DocumentVectorizedEvent, MatchQuery, MatchResponse, MatchResult};
 pub use types::{DenseVector, DocumentPayload};

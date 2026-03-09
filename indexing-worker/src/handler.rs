@@ -18,11 +18,12 @@ pub async fn process_vector_event(
 
     tracing::info!(%doc_id, "Processing vector for indexing");
 
-    let point_id = doc_id.as_u128() as u64;
+    // Use the UUID string as the Qdrant point ID so it can be recovered
+    // losslessly in the matching-service (as_u128() as u64 truncates 128→64 bits)
     let point = PointStruct::new(
-        point_id,
+        doc_id.to_string(),
         event.vector,
-        Payload::new(), // We could add metadata here later
+        Payload::new(),
     );
 
     qdrant_client

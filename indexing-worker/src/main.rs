@@ -12,7 +12,7 @@ use shared_types::DocumentVectorizedEvent;
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     tracing_subscriber::fmt()
-        .with_max_level(tracing::Level::DEBUG)
+        .with_max_level(tracing::Level::INFO)
         .init();
 
     let config = Config::from_file("indexing-worker/config.yaml").unwrap_or_else(|_| {
